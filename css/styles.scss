@@ -1,0 +1,710 @@
+$primaryColor: rgb(241, 235, 233);
+$secondaryColor: rgb(196, 182, 147);
+$thirdColor: rgb(100, 90, 65);
+$fourthColor: rgb(62, 43, 36);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import "./header";
+
+main {
+  .chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: $thirdColor;
+    color: white;
+    border: 1px solid $primaryColor;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: #f3e0c5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+  }
+  .chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    flex-direction: column;
+  }
+  .close-chatbot {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .chatbot-body {
+    display: block;
+    margin-top: 10px;
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+  }
+  .chatbot-input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .chatbot-submit {
+    width: 100%;
+    background: #6b4f36;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .message {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    background-color: $secondaryColor;
+    color: $fourthColor;
+  }
+  .timestamp {
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    top: -15px;
+    left: 0;
+  }
+
+  .hero__section {
+    background-image: url("../images/images\ \(6\).avif");
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed;
+    height: 100vh; /* Example height for a hero section */
+    width: 100%;
+  }
+  .hero__text {
+    @include flexColumn();
+    padding: 7rem;
+    color: $fourthColor;
+    h1 {
+      font-size: 6.5rem;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+  .hero__text-2 {
+    @include flexColumn();
+    padding: 0rem 7rem;
+
+    a {
+      border: 1px solid $fourthColor;
+      background-color: $fourthColor;
+      color: $secondaryColor;
+      padding: 0.5rem 1.5rem;
+      display: block;
+      max-width: 110px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    a:hover {
+      background-color: $secondaryColor;
+      color: $fourthColor;
+    }
+  }
+
+  .section__1 {
+    padding: 1rem;
+    background-color: $primaryColor;
+    @include flexCenter();
+    @include flexColumn();
+    height: fit-content;
+    .section__text {
+      height: fit-content;
+      max-width: 990px;
+      width: 100%;
+      padding: 1rem;
+      margin-top: 6rem;
+      color: $fourthColor;
+      .text {
+        font-size: 3rem;
+      }
+    }
+    .section__image {
+      margin: 5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      height: auto;
+      gap: 25vw;
+
+      .section__1__img__1 {
+        max-width: 300px;
+        margin-right: auto;
+      }
+      .section__1__img__2 {
+        max-width: 200px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .section__2 {
+    padding: 1rem;
+    background-color: $secondaryColor;
+    @include flexCenter();
+    @include flexColumn();
+    height: fit-content;
+    .section__text_2 {
+      height: fit-content;
+      max-width: 990px;
+      width: 100%;
+      padding: 1rem;
+      margin-top: 6rem;
+      color: $fourthColor;
+      .text_2 {
+        font-size: 3rem;
+      }
+    }
+    .section__image_2 {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem;
+      place-items: center;
+      height: auto;
+
+      img {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 4rem;
+      gap: 2.5rem;
+      place-items: center; // Centers both horizontally and vertically
+      align-items: start;
+      color: $fourthColor;
+
+      .text_big {
+        font-size: 2.5rem;
+      }
+      .text_small {
+        font-size: 1.2rem;
+        max-width: 300px;
+        width: 100%;
+      }
+
+      .flex_section {
+        @include flexColumn();
+        gap: 0.5rem;
+        font-size: 1.2rem;
+      }
+      .flex_links {
+        @include flexColumn();
+        gap: 1rem;
+
+        a {
+          border: 1px solid $fourthColor;
+          text-decoration: none;
+          color: $fourthColor;
+          padding: 0.8rem;
+          text-align: center;
+        }
+
+        .link_1 {
+          color: $secondaryColor;
+          background-color: $fourthColor;
+          transition: 0.3s;
+          &:hover {
+            background-color: $secondaryColor;
+            color: $fourthColor;
+          }
+        }
+        .link_2 {
+          transition: 0.3s;
+          &:hover {
+            color: $secondaryColor;
+            background-color: $fourthColor;
+          }
+        }
+      }
+    }
+  }
+  .section__3 {
+    padding: 1rem;
+    background-color: $thirdColor;
+    @include flexCenter();
+    @include flexColumn();
+    height: fit-content;
+
+    .section__image_3 {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem;
+      place-items: center;
+      height: auto;
+
+      img {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 4rem;
+      gap: 2.5rem;
+      place-items: center; // Centers both horizontally and vertically
+      align-items: start;
+      color: $fourthColor;
+
+      color: $primaryColor;
+
+      .text_big {
+        font-size: 2.5rem;
+      }
+      .text_small {
+        font-size: 1.2rem;
+        max-width: 300px;
+        width: 100%;
+      }
+
+      .flex_section {
+        @include flexColumn();
+        gap: 0.5rem;
+        font-size: 1.2rem;
+      }
+      .flex_links {
+        @include flexColumn();
+        gap: 1rem;
+
+        a {
+          border: 1px solid $primaryColor;
+          text-decoration: none;
+          color: $fourthColor;
+          padding: 0.8rem;
+          text-align: center;
+        }
+
+        .link_1 {
+          color: $fourthColor;
+          background-color: $primaryColor;
+          transition: 0.3s;
+          &:hover {
+            background-color: $thirdColor;
+            color: $primaryColor;
+          }
+        }
+        .link_2 {
+          color: $fourthColor;
+          background-color: $secondaryColor;
+          transition: 0.3s;
+          &:hover {
+            color: $secondaryColor;
+            background-color: $fourthColor;
+            border: 1px solid $fourthColor;
+          }
+        }
+      }
+    }
+  }
+  .section__4 {
+    padding: 1rem;
+    background-color: $fourthColor;
+    @include flexCenter();
+    @include flexColumn();
+    height: fit-content;
+
+    .section__image_3 {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem;
+      place-items: center;
+      height: auto;
+
+      img {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 4rem;
+      gap: 2.5rem;
+      place-items: center; // Centers both horizontally and vertically
+      align-items: start;
+      color: $fourthColor;
+      color: $secondaryColor;
+
+      .text_big {
+        font-size: 2.5rem;
+      }
+      .text_small {
+        font-size: 1.2rem;
+        max-width: 300px;
+        width: 100%;
+      }
+
+      .flex_section {
+        @include flexColumn();
+        gap: 0.5rem;
+        font-size: 1.2rem;
+      }
+      .flex_links {
+        @include flexColumn();
+        gap: 1rem;
+
+        a {
+          border: 1px solid $primaryColor;
+          text-decoration: none;
+          color: $fourthColor;
+          padding: 0.8rem;
+          text-align: center;
+        }
+
+        .link_1 {
+          color: $fourthColor;
+          background-color: $secondaryColor;
+          transition: 0.3s;
+          &:hover {
+            background-color: $fourthColor;
+            color: $primaryColor;
+          }
+        }
+        .link_2 {
+          color: $secondaryColor;
+          background-color: $fourthColor;
+          transition: 0.3s;
+          &:hover {
+            color: $fourthColor;
+            background-color: $secondaryColor;
+            border: 1px solid $fourthColor;
+          }
+        }
+      }
+    }
+  }
+
+  .section__5 {
+    background-color: $primaryColor;
+    padding: 6.5rem;
+    gap: 5rem;
+    @include flexCenterCol;
+
+    .section__5_text {
+      font-size: 3rem;
+      color: $fourthColor;
+      max-width: 990px;
+      width: 100%;
+
+      text-align: center;
+    }
+    .section__5__img__1 {
+      margin-right: auto;
+      max-width: 200px;
+      width: 100%;
+    }
+    .section__5__img__2 {
+      margin-left: auto;
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+  .section__6 {
+    padding: 1rem;
+    @include flexColumn();
+    justify-content: center;
+    align-items: center;
+    background-color: $secondaryColor;
+    gap: 4rem;
+    .txt {
+      margin-top: 5rem;
+    }
+    .__min {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+      text-align: center;
+      width: 100%;
+      gap: 5rem;
+      text-wrap: nowrap;
+      .__mins {
+        font-size: 2.5rem;
+        color: $fourthColor;
+        width: 100%;
+      }
+    }
+    img {
+      max-width: 800px;
+      width: 100%;
+    }
+  }
+}
+
+.section__7 {
+  padding: 1rem;
+  background-color: $secondaryColor;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  padding-top: 4rem;
+  .section__7__text {
+    @include flexColumn;
+    align-self: start;
+    gap: 2rem;
+    max-width: 450px;
+    margin-top: 4rem;
+    h4 {
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+  }
+
+  img {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+
+.section__8 {
+  background-color: $secondaryColor;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  padding: 4rem;
+  .section__7__text {
+    @include flexColumn;
+    align-self: start;
+    gap: 2rem;
+    max-width: 450px;
+    margin-top: 4rem;
+    h4 {
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+  }
+
+  img {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+
+.section__9 {
+  padding: 1rem;
+  background-color: $primaryColor;
+  margin: 0;
+  color: $fourthColor;
+  .section__9__text {
+    padding: 3rem;
+    h1 {
+      font-size: 2.5rem;
+      max-width: 550px;
+      width: 100%;
+    }
+  }
+  .container {
+    width: 100%;
+
+    padding: 20px;
+    background-color: $primaryColor;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .slick-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 500px;
+    cursor: grab;
+    border-radius: 0px;
+  }
+  .slider-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .slick-dots {
+    bottom: 15px;
+  }
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+  .slick-dots li.slick-active button:before {
+    color: #333;
+  }
+  .slick-dots li button:focus {
+    outline: none;
+  }
+  .slick-dots li button:hover:before {
+    color: #555;
+  }
+}
+
+.section__10 {
+  padding: 1rem;
+  height: 50vh;
+  background-color: $secondaryColor;
+  color: $fourthColor;
+  @include flexCenterCol;
+
+  .section__10__text {
+    @include flexCenterCol;
+    gap: 1.5rem;
+    max-width: 800px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  button {
+    max-width: 120px;
+    min-height: 40px;
+    width: 100%;
+    border: none;
+    background-color: $fourthColor;
+    color: $secondaryColor;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background-color: $secondaryColor;
+      color: $fourthColor;
+      border: 1px solid $fourthColor;
+    }
+  }
+}
+.bg-image {
+  background-image: url("../images/images\ \(16\).avif");
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed;
+  height: 100vh; /* Example height for a hero section */
+  max-width: 100%;
+}
+
+.section__11 {
+  background-color: $fourthColor;
+  height: fit-content;
+
+  padding: 1rem;
+  color: $secondaryColor;
+  @include flexCenterCol;
+  gap: 2rem;
+  .input__form {
+    @include flexRow;
+    gap: 1rem;
+  }
+  #form__action {
+    @include flexColumn;
+    gap: 2rem;
+
+    input {
+      outline: none;
+      border: none;
+      color: $secondaryColor;
+      max-width: 250px !important;
+      width: 100%;
+      height: 40px;
+      border-bottom: 2px solid $secondaryColor;
+      background-color: $fourthColor;
+    }
+
+    select {
+      outline: none;
+      border: none;
+      color: $secondaryColor;
+      max-width: 250px !important;
+      width: 100%;
+      height: 40px;
+      border-bottom: 2px solid $secondaryColor;
+      background-color: $fourthColor;
+    }
+  }
+  button {
+    height: 40px;
+    border: 1px solid $secondaryColor;
+    background-color: $secondaryColor;
+    cursor: pointer;
+    &:hover {
+      background-color: $fourthColor;
+      color: $secondaryColor;
+    }
+  }
+
+  .error {
+    border: 1px solid red;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px !important;
+  }
+
+  .section__11__text__1 {
+    @include flexColumn;
+    gap: 1rem;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    h1 {
+      font-size: 3rem;
+      margin-top: 3rem;
+    }
+  }
+}
+
+footer {
+  height: 20vh;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $fourthColor;
+
+  a {
+    color: $secondaryColor;
+  }
+}
+
+/* Responsive for Mobile */
+// Define breakpoints
+@import "./breakpoints";

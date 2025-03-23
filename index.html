@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav id="header">
+        <!-- Left: Desktop Menu -->
+        <div class="nav-menu">
+          <a class="link_tag" href="#section__1">About</a>
+          <a class="link_tag" href="#section__2">The Building</a>
+          <a class="link_tag" href="#">Location</a>
+          <a class="link_tag" href="#">Amenities</a>
+        </div>
+
+        <!-- Centered Title -->
+        <h1 class="nav-title">LP/52</h1>
+
+        <!-- Right: Inquire Button & Social Icons -->
+        <div class="nav-right">
+          <a class="Inquire__button" href="#">Inquire</a>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon" id="menuIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="#section__1">About</a></li>
+          <li><a href="#section__2">The Building</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Amenities</a></li>
+          <li><a class="Inquire__button" href="#">Inquire</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <audio
+        id="sendSound"
+        src="https://www.fesliyanstudios.com/play-mp3/2762"
+      ></audio>
+      <button id="chatbotToggle" class="chatbot-button">
+        Chat Bot &nbsp; <i class="fa-regular fa-comment-dots"></i>
+      </button>
+
+      <div id="chatbot" class="chatbot-container">
+        <div class="chatbot-header">
+          <h3>La Perla</h3>
+          <p>We’ll reply as soon as we can</p>
+          <span id="closeChatbot" class="close-chatbot">&times;</span>
+        </div>
+
+        <div id="chatbotBody" class="chatbot-body">
+          <div class="message bot-message">Hello! How can I help you?</div>
+        </div>
+
+        <input
+          type="text"
+          id="chatbotInput"
+          class="chatbot-input"
+          placeholder="Type a message..."
+        />
+        <button id="chatbotSubmit" class="chatbot-submit">Send</button>
+      </div>
+      <section class="hero__section">
+        <div class="hero__background"></div>
+        <div class="hero__text">
+          <p>Meet me at</p>
+          <h1>La Perla</h1>
+          <p>25 Brook St.</p>
+        </div>
+        <div class="hero__text-2">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <br />
+            Reiciendis, excepturi!
+            <br /><br />
+          </p>
+          <a href="">See Video</a>
+        </div>
+      </section>
+
+      <section class="section__1" id="section__1">
+        <div class="section__text" data-aos="fade-up">
+          <p>A Diffrent State of Mind</p>
+          <p class="text">
+            Established in the historic quarter, where cultural legacy meets the
+            <span class="text-style">sought-after culinary scene </span>, Brook
+            St. is the best kept secret of town, just across the sea front. Its
+            urban renaissance is infusing new vibes and brings back creatives,
+            trend setters and <span class="text-style">smart investors</span>.
+          </p>
+        </div>
+        <div class="section__image">
+          <img
+            class="section__1__img__1"
+            src="images/images (1).avif"
+            alt="city beneath the wave"
+            data-aos="fade-right"
+          />
+
+          <img
+            class="section__1__img__2"
+            src="images/images (7).avif"
+            alt="beach people in a wave"
+            data-aos="fade-left"
+          />
+        </div>
+      </section>
+
+      <section class="section__2" id="section__2">
+        <div class="section__text_2">
+          <p>The Building</p>
+          <p class="text_2">
+            At 18 stories and with its unique design, La Perla is a modernist
+            icon in the city’s skyline.
+          </p>
+        </div>
+        <div class="section__image_2">
+          <img
+            class="section__1__img__1"
+            src="images/images (3).avif"
+            alt="city beneath the wave"
+          />
+          <img
+            class="section__1__img__2"
+            src="images/images (5).avif"
+            alt="beach people in a wave"
+          />
+        </div>
+
+        <div class="grid">
+          <div class="text_big"><p>Gardenia Apt.</p></div>
+          <div class="text_small">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              exercitationem iusto fugit sequi nostrum enim praesentium est,
+              molestias in?
+            </p>
+          </div>
+          <div class="flex_section">
+            <p><i class="fa-solid fa-building"></i> Floors: 1-2</p>
+            <p><i class="fa-solid fa-border-all"></i> Space: 150 Sqm</p>
+            <p><i class="fa-solid fa-bed"></i> Bedrooms: 2</p>
+            <p><i class="fa-solid fa-shower"></i> Bathrooms: 1-2</p>
+          </div>
+          <div class="flex_links">
+            <a class="link_1" href="">Check Availability</a>
+            <a class="link_2" href="">View Floor Plan</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__3">
+        <div class="section__image_3">
+          <img
+            class="section__1__img__1"
+            src="images/images (2).avif"
+            alt="city beneath the wave"
+          />
+          <img
+            class="section__1__img__2"
+            src="images/images (4).avif"
+            alt="beach people in a wave"
+          />
+        </div>
+
+        <div class="grid">
+          <div class="text_big"><p>Gardenia Apt.</p></div>
+          <div class="text_small">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              necessitatibus facilis deleniti nam, quo, officiis voluptate
+              magnam cum cumque culpa ut accusamus ea. Ipsa, cupiditate.
+            </p>
+          </div>
+          <div class="flex_section">
+            <p><i class="fa-solid fa-building"></i> Floors: 1-2</p>
+            <p><i class="fa-solid fa-border-all"></i> Space: 150 Sqm</p>
+            <p><i class="fa-solid fa-bed"></i> Bedrooms: 2</p>
+            <p><i class="fa-solid fa-shower"></i> Bathrooms: 1-2</p>
+          </div>
+          <div class="flex_links">
+            <a class="link_1" href="">Check Availability</a>
+            <a class="link_2" href="">View Floor Plan</a>
+          </div>
+        </div>
+      </section>
+      <section class="section__4">
+        <div class="section__image_3">
+          <img
+            class="section__1__img__1"
+            src="images/images (15).avif"
+            alt="city beneath the wave"
+          />
+          <img
+            class="section__1__img__2"
+            src="images/images (8).avif"
+            alt="beach people in a wave"
+          />
+        </div>
+
+        <div class="grid">
+          <div class="text_big"><p>Gardenia Apt.</p></div>
+          <div class="text_small">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+              sit facilis ea recusandae explicabo temporibus, iusto repellendus
+              omnis hic, esse labore doloremque magni repellat porro.
+            </p>
+          </div>
+          <div class="flex_section">
+            <p><i class="fa-solid fa-building"></i> Floors: 1-2</p>
+            <p><i class="fa-solid fa-border-all"></i> Space: 150 Sqm</p>
+            <p><i class="fa-solid fa-bed"></i> Bedrooms: 2</p>
+            <p><i class="fa-solid fa-shower"></i> Bathrooms: 1-2</p>
+          </div>
+          <div class="flex_links">
+            <a class="link_1" href="">Check Availability</a>
+            <a class="link_2" href="">View Floor Plan</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__5">
+        <img
+          class="section__5__img__1"
+          src="images/images (11).avif"
+          alt=""
+          data-aos="fade-right"
+        />
+        <p class="section__5_text" data-aos="fade-up">
+          “Immerse yourself in the seamless fusion of timeless architecture and
+          modern design, where each home tells a story of its own”
+        </p>
+        <img
+          class="section__5__img__2"
+          src="images/images (12).avif"
+          alt=""
+          data-aos="fade-left"
+        />
+      </section>
+      <section class="section__6">
+        <p class="txt" data-aos="fade-up">Best Possible Location</p>
+        <div class="__min" data-aos="fade-up">
+          <p>
+            <span class="__mins">02 Min.</span> <br />
+            from the beach
+          </p>
+          <p>
+            <span class="__mins">05 Min.</span> <br />
+            from city hall
+          </p>
+          <p>
+            <span class="__mins">10 Min.</span> <br />
+            from central station
+          </p>
+        </div>
+        <img src="images/images (9).avif" alt="" data-aos="fade" />
+      </section>
+      <section class="section__7">
+        <img src="images/images (14).avif" alt="" data-aos="fade-right" />
+        <div class="section__7__text" data-aos="fade">
+          <p>The Architect</p>
+          <h4>Raya Hayek</h4>
+          <p>
+            Award winning architect and designer proudly presents her first
+            residential project in town
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium, quo soluta temporibus reiciendis perspiciatis
+            doloremque vero illum voluptate iure commodi pariatur unde culpa,
+            eveniet exercitationem.
+          </p>
+        </div>
+      </section>
+
+      <section class="section__8">
+        <div class="section__7__text" data-aos="fade">
+          <p>The Architect</p>
+          <h4>Mogendor Group</h4>
+          <p>
+            Award winning architect and designer proudly presents her first
+            residential project in town
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium, quo soluta temporibus reiciendis perspiciatis
+            doloremque vero illum voluptate iure commodi pariatur unde culpa,
+            eveniet exercitationem.
+          </p>
+        </div>
+        <img src="images/images.avif" alt="" data-aos="fade-left" />
+      </section>
+      <section class="section__9">
+        <div class="section__9__text">
+          <p>Premier Amenities for Elevated Living</p>
+          <h1>Indulge in Unparalleled Luxury at Our Urban Oasis</h1>
+        </div>
+        <div class="container">
+          <div class="slider-title"></div>
+          <div class="slick-slider">
+            <div>
+              <img src="images/images (6).avif" alt="Slide 1" /><br />
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+            <div>
+              <img src="images/images (12).avif" alt="Slide 2" /><br />
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+            <div>
+              <img src="images/images.avif" alt="Slide 3" /><br />
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__10">
+        <div class="section__10__text">
+          <h1 data-aos="fade">Exclusive Pre-Sale Now Open!</h1>
+          <p>
+            Our team is ready to assist you in securing your piece of luxury.
+            Don't miss out on this opportunity to make La Perla your address of
+            distinction.
+          </p>
+          <button>Submit</button>
+        </div>
+      </section>
+      <section class="bg-image"></section>
+      <section class="section__11">
+        <div class="section__11__text__1">
+          <h1>Get in Touch</h1>
+          <p>
+            Please submit your contact information and one of our sales
+            associates will be in touch with you shortly
+          </p>
+        </div>
+        <form action="" id="form__action">
+          <div class="input__form">
+            <div>
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" />
+              <div>
+                <small class="error-message"></small>
+              </div>
+            </div>
+            <div>
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" />
+              <div>
+                <small class="error-message"></small>
+              </div>
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" />
+              <div>
+                <small class="error-message"></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="input__form">
+            <div>
+              <label for="select1">Select Option *</label>
+              <select name="select1" id="select1">
+                <option value="" disabled selected>Choose an option</option>
+                <option value="gardenia">Gardenia</option>
+                <option value="ocean">Ocean</option>
+                <option value="sky">Sky</option>
+              </select>
+              <div>
+                <small class="error-message"></small>
+              </div>
+            </div>
+            <div>
+              <label for="phoneNumber">Phone Number *</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" />
+              <div>
+                <small class="error-message"></small>
+              </div>
+            </div>
+            <div>
+              <label for="select2">Another Select *</label>
+              <select name="select2" id="select2">
+                <option value="" disabled selected>Choose an option</option>
+                <option value="gardenia">Gardenia</option>
+                <option value="ocean">Ocean</option>
+                <option value="sky">Sky</option>
+              </select>
+              <div>
+                <small class="error-message"></small>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a href="">Accessibility Statement</a> &nbsp;&nbsp;&nbsp;
+        <a href="">Privacy Policy</a>
+      </div>
+      <div>
+        <a href="">©2025 by La Perla. Latest</a>
+      </div>
+    </footer>
+
+    <script src="validation__form.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        easing: "ease-in-out", // Easing function
+        once: false, // Animation only happens once
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slick-slider").slick({
+          autoplay: true,
+          autoplaySpeed: 1800,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+      });
+    </script>
+  </body>
+</html>
