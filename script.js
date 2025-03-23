@@ -1,7 +1,7 @@
 const menuIcon = document.getElementById("menuIcon");
 const mobileMenu = document.getElementById("mobileMenu");
 const menuLinks = document.querySelectorAll(".mobile-menu a"); // Select all menu links
-const closeMenuBtn = document.querySelector(".Inquire__button");
+
 
 function toggleMenu() {
   menuIcon.classList.toggle("active"); // Toggle X animation
