@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f9;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .slick-slider img {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+      }
+      .slider-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .slick-dots {
+        bottom: 15px;
+      }
+      .slick-dots li button:before {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+      }
+      .slick-dots li.slick-active button:before {
+        color: #333;
+      }
+      .slick-dots li button:focus {
+        outline: none;
+      }
+      .slick-dots li button:hover:before {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider-title">Simple Image Slider with Dots Navigation</div>
+      <div class="slick-slider">
+        <div>
+          <img src="https://placehold.co/600x400@2x.png" alt="Slide 1" />
+        </div>
+        <div>
+          <img src="https://placehold.co/600x400@2x.png" alt="Slide 2" />
+        </div>
+        <div>
+          <img src="https://placehold.co/600x400@2x.png" alt="Slide 3" />
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".slick-slider").slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+      });
+    </script>
+  </body>
+</html>
