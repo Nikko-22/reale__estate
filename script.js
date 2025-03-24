@@ -1,6 +1,8 @@
 const menuIcon = document.getElementById("menuIcon");
 const mobileMenu = document.getElementById("mobileMenu");
 const menuLinks = document.querySelectorAll(".mobile-menu a"); // Select all menu links
+const closeMenuBtn = document.querySelector(".Inquire__button"); // Ensure button is selected
+const header = document.getElementById("header");
 
 function toggleMenu() {
   menuIcon.classList.toggle("active"); // Toggle X animation
@@ -13,38 +15,44 @@ menuIcon.addEventListener("click", toggleMenu);
 // Clicking any menu link closes the menu and scrolls to section
 menuLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    if (link.getAttribute("href").startsWith("#")) {
-      // Check if it's an internal link
+    const target = link.getAttribute("href");
+    if (target.startsWith("#")) {
       e.preventDefault(); // Prevent default jump
-      const section = document.querySelector(link.getAttribute("href"));
+      const section = document.querySelector(target);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
       }
     }
-    toggleMenu(); // Close menu after clicking
+
+    // Close the menu only if it is currently open
+    if (mobileMenu.classList.contains("active")) {
+      toggleMenu();
+    }
   });
 });
 
-// Clicking the "Inquire" button closes the menu
-closeMenuBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default link behavior
-  toggleMenu();
-});
+// Prevent the "Inquire" button from toggling the menu
+if (closeMenuBtn) {
+  closeMenuBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Stop event from bubbling up
+  });
+}
 
 // JavaScript for Scroll Logic
 let lastScrollPosition = 0;
-const header = document.getElementById("header");
+const scrollThreshold = 10; // Prevents flickering when slightly scrolling
 
 window.addEventListener("scroll", () => {
   const currentScrollPosition = window.pageYOffset;
 
-  if (currentScrollPosition > lastScrollPosition) {
-    // Scrolling down - hide the header
-    header.classList.add("hidden");
-  } else {
-    // Scrolling up - show the header
-    header.classList.remove("hidden");
+  if (Math.abs(currentScrollPosition - lastScrollPosition) > scrollThreshold) {
+    if (currentScrollPosition > lastScrollPosition) {
+      // Scrolling down - hide the header
+      header.classList.add("hidden");
+    } else {
+      // Scrolling up - show the header
+      header.classList.remove("hidden");
+    }
+    lastScrollPosition = currentScrollPosition;
   }
-
-  lastScrollPosition = currentScrollPosition;
 });

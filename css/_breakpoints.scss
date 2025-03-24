@@ -253,17 +253,26 @@ nav {
   }
 }
 
+.section__10,
+.section__11 {
+  @media (max-width: $mobile-xlarge) {
+    padding: 2rem;
+  }
+}
+.section__7,
+.section__8 {
+  @media (max-width: $mobile-xlarge) {
+    padding: 1rem;
+  }
+}
+
 .section__1,
 .section__2,
 .section__3,
 .section__4,
 .section__5,
 .section__6,
-.section__7,
-.section__8,
-.section__9,
-.section__10,
-.section__11 {
+.section__9 {
   @media (max-width: $mobile-xlarge) {
     padding: 0 !important;
   }

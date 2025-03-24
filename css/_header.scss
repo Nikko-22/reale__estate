@@ -46,7 +46,7 @@ header {
   }
 
   nav.hidden {
-    transform: translateY(-100%); /* Slide the header out of view */
+    transform: translateY(-100%) !important; /* Slide the header out of view */
     display: none;
   }
 

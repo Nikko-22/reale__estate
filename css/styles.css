@@ -32,7 +32,7 @@ header nav {
   transition: transform 0.3s ease-in-out !important;
 }
 header nav.hidden {
-  transform: translateY(-100%); /* Slide the header out of view */
+  transform: translateY(-100%) !important; /* Slide the header out of view */
   display: none;
 }
 header .link_tag {
@@ -152,6 +152,9 @@ header .mobile-menu a {
   font-size: 1.5rem;
 }
 
+main {
+  overflow: hidden;
+}
 main .chatbot-button {
   position: fixed;
   bottom: 20px;
@@ -353,6 +356,7 @@ main .section__2 .grid {
   gap: 2.5rem;
   place-items: center;
   align-items: start;
+  justify-items: start;
   color: rgb(62, 43, 36);
 }
 main .section__2 .grid .text_big {
@@ -427,6 +431,7 @@ main .section__3 .grid {
   gap: 2.5rem;
   place-items: center;
   align-items: start;
+  justify-items: start;
   color: rgb(62, 43, 36);
   color: rgb(241, 235, 233);
 }
@@ -505,6 +510,7 @@ main .section__4 .grid {
   gap: 2.5rem;
   place-items: center;
   align-items: start;
+  justify-items: start;
   color: rgb(62, 43, 36);
   color: rgb(196, 182, 147);
 }
@@ -715,8 +721,9 @@ main .section__6 img {
 }
 
 .section__10 {
-  padding: 1rem;
-  height: 50vh;
+  padding: 5rem;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: rgb(196, 182, 147);
   color: rgb(62, 43, 36);
   display: flex;
@@ -1072,17 +1079,27 @@ footer a {
 }
 
 @media (max-width: 600px) {
+  .section__10,
+  .section__11 {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section__7,
+  .section__8 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
   .section__1,
   .section__2,
   .section__3,
   .section__4,
   .section__5,
   .section__6,
-  .section__7,
-  .section__8,
-  .section__9,
-  .section__10,
-  .section__11 {
+  .section__9 {
     padding: 0 !important;
   }
 }/*# sourceMappingURL=styles.css.map */

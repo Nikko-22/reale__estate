@@ -16,6 +16,7 @@ html {
 @import "./header";
 
 main {
+  overflow: hidden;
   .chatbot-button {
     position: fixed;
     bottom: 20px;
@@ -211,6 +212,7 @@ main {
       gap: 2.5rem;
       place-items: center; // Centers both horizontally and vertically
       align-items: start;
+      justify-items: start;
       color: $fourthColor;
 
       .text_big {
@@ -285,6 +287,7 @@ main {
       gap: 2.5rem;
       place-items: center; // Centers both horizontally and vertically
       align-items: start;
+      justify-items: start;
       color: $fourthColor;
 
       color: $primaryColor;
@@ -364,6 +367,7 @@ main {
       gap: 2.5rem;
       place-items: center; // Centers both horizontally and vertically
       align-items: start;
+      justify-items: start;
       color: $fourthColor;
       color: $secondaryColor;
 
@@ -577,8 +581,9 @@ main {
 }
 
 .section__10 {
-  padding: 1rem;
-  height: 50vh;
+  padding: 5rem;
+
+  height: fit-content;
   background-color: $secondaryColor;
   color: $fourthColor;
   @include flexCenterCol;
