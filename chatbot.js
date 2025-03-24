@@ -101,7 +101,7 @@ function submitForm(button) {
   // Add confirmation message
   const successMessage = document.createElement("div");
   successMessage.classList.add("message", "bot-message");
-  successMessage.innerText = "Message sent successfully!";
+  successMessage.innerText = "Message sent successfully! We will get in touch shortly.";
   chatbotBody.appendChild(successMessage);
   chatbotBody.scrollTop = chatbotBody.scrollHeight;
 }
