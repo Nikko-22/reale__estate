@@ -98,13 +98,32 @@ main {
     left: 0;
   }
 
-  .hero__section {
-    background-image: url("../images/images\ \(6\).avif");
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed;
-    height: 100vh; /* Example height for a hero section */
+  .parallax-container {
+    position: absolute; /* or fixed depending on use case */
+    top: 0;
+    left: 0;
     width: 100%;
+    min-height: 100vh;
+    z-index: -1; /* On top of background, but below real content */
+    pointer-events: none; /* Crucial! This makes it ignore mouse clicks */
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .parallax-image {
+    width: 100%;
+    min-height: 100vh;
+    pointer-events: auto; /* Let the image still react to JS hover */
+    transition: 0.3s;
+  }
+
+  .hero__section {
+    // background-image: url("../images/images\ \(6\).avif");
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
+    // height: 100vh;
+    // width: 100%;
   }
   .hero__text {
     @include flexColumn();

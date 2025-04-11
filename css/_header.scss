@@ -34,6 +34,7 @@ header {
   top: 0;
   background-color: $primaryColor;
   z-index: 1000;
+  overflow: hidden;
   nav {
     display: grid;
     width: 100%;

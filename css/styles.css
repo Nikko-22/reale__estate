@@ -14,6 +14,7 @@ header {
   top: 0;
   background-color: rgb(241, 235, 233);
   z-index: 1000;
+  overflow: hidden;
   /* Navbar Left (Menu) */
   /* Centered H1 */
   /* Right Side: Buttons & Socials */
@@ -234,13 +235,22 @@ main .timestamp {
   top: -15px;
   left: 0;
 }
-main .hero__section {
-  background-image: url("../images/images (6).avif");
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the image */
-  background-attachment: fixed;
-  height: 100vh; /* Example height for a hero section */
+main .parallax-container {
+  position: absolute; /* or fixed depending on use case */
+  top: 0;
+  left: 0;
   width: 100%;
+  min-height: 100vh;
+  z-index: -1; /* On top of background, but below real content */
+  pointer-events: none; /* Crucial! This makes it ignore mouse clicks */
+  overflow: hidden;
+  transition: 0.3s;
+}
+main .parallax-image {
+  width: 100%;
+  min-height: 100vh;
+  pointer-events: auto; /* Let the image still react to JS hover */
+  transition: 0.3s;
 }
 main .hero__text {
   display: flex;
@@ -932,9 +942,6 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  nav {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
   nav .nav-menu,
   nav .nav-right {
     display: none;

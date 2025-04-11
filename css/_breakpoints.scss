@@ -103,8 +103,6 @@ $breakpoint-large-desktop: 1440px;
 // Navigation styles
 nav {
   @media (max-width: $breakpoint-tablet) {
-    grid-template-columns: repeat(2, 1fr) !important;
-
     .nav-menu,
     .nav-right {
       display: none;
